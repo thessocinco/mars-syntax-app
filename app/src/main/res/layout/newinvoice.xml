@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".InvoiceData.NewInvoice">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <!-- transaction card view -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- transaction section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvtransinv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Van Selling"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <!-- customer code section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Code"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvcodenew"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="Registered Customer Code"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <!-- customer name section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvcustomernamenew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="Registered Customer Name"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- transaction card view -->
+
+            <!-- update credit line card view -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- term status -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Term Status"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvtermstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/rounded_textview"
+                            android:text="0"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <!-- credit line & balance -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Line&amp;Balance"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- credit line row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CL"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvcreditlimitval"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="0.00"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <!-- balance row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bal"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvbalcreditval"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="0.00"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <!-- outstanding checks & available credit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outstanding Checks&amp;AvailableCredit"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- outstanding checks row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OC"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvOutSCheckval"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="0.00"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray" />
+                    </LinearLayout>
+
+                    <!-- available credit row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AC"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvavailblecreditval"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="0.00"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btreqcreditline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button"
+                        android:textColor="@drawable/button_text_selector"
+                        android:layout_marginTop="5dp"
+                        android:text="Request Updated Creditline"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- update credit line card view -->
+
+            <!-- terms & days term section card view-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- terms & days term section -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <!-- terms label -->
+                        <TextView
+                            android:id="@+id/tvterms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Terms"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <!-- days term label -->
+                        <TextView
+                            android:id="@+id/tvdaysterm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Days Term"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- spinners section -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <!-- terms spinner -->
+                        <Spinner
+                            android:id="@+id/sptermsnew"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/CustAccountTypeNEWINV"
+                            app:layout_columnWeight="1" />
+
+                        <!-- days term spinner -->
+                        <Spinner
+                            android:id="@+id/spdaystermnew"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/CustTerm"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <!-- prefix & invoice number section -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <!-- prefix label -->
+                        <TextView
+                            android:id="@+id/tvprefix"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="center_vertical"
+                            android:text="Prefix"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <!-- invoice number label -->
+                        <TextView
+                            android:id="@+id/tvinvoicenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:gravity="center_vertical"
+                            android:text="Invoice Number"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- prefix & invoice number inputs -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <!-- prefix spinner (fixed 100dp width) -->
+                        <Spinner
+                            android:id="@+id/spprifix"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/prefix"
+                            android:padding="5dp" />
+
+                        <!-- invoice number input (remaining space) -->
+                        <EditText
+                            android:id="@+id/etinvoicenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:hint="@string/invoicenumber"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="LabelFor,TextFields" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                    <!-- InputOSNumber section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Input OSNumber"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- IOSN input row -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IOSN"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etosnumbernewinv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:hint="iosn"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText,LabelFor" />
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- terms & days term section card view-->
+
+            <!-- select outlet, category, delivery date, search item, barcode button card view -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- select outlet -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Select Outlet"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/spoutletnewinv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/outlet"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- select category -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Category"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/spcategorynewinv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/outlet"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- delivery date -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Delivery Date"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etdeldate"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:hint="Input Delivery Date Sched"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- search item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Item Description"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etqueryproduct"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Search Item"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- barcode -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Barcode"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etquerybarcode"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:hint="Input Barcode"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- barcode button section -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <Button
+                            android:id="@+id/btscanbarcoden"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Item B-Code"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btscanbarcodencs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Case B-Code"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- select outlet, category, delivery date, search item, barcode button card view -->
+
+            <!-- select product card view -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- select product -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Product"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,TooManyViews" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- select product item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="1">
+
+                        <Spinner
+                            android:id="@+id/spproductnew"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_light" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Case Factor"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvcsfactornewinvoice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:hint="0"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText,TextViewEdits" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Available"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvqtyavailable"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_light"
+                            android:hint="0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText,TextViewEdits" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- unit of measure and cases -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unit Of Measure&amp;Cases"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="UM"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvumnewinvoice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Unit"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="CS-Unit"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvcsumnewinvoice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Unit"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- unit price and cases -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unit Price&amp;Cases"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="UP"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etunitprice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="CS-Price"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etcsunitprice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- quantity and cases -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity&amp;Cases"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Qty"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etquantitynew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="CS-Qty"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etcsquantitynew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!--                    <androidx.cardview.widget.CardView-->
+                    <!--                        xmlns:android="http://schemas.android.com/apk/res/android"-->
+                    <!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_margin="8dp"-->
+                    <!--                        app:cardCornerRadius="12dp"-->
+                    <!--                        app:cardElevation="6dp"-->
+                    <!--                        android:backgroundTint="#FFFFFF">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:orientation="vertical"-->
+                    <!--                            android:padding="12dp">-->
+
+                    <!--                            &lt;!&ndash; Quantity & Cases Title &ndash;&gt;-->
+                    <!--                            <androidx.gridlayout.widget.GridLayout-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:layout_marginBottom="2dp"-->
+                    <!--                                app:columnCount="1">-->
+
+                    <!--                                <TextView-->
+                    <!--                                    android:layout_width="match_parent"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:text="Quantity &amp; Cases"-->
+                    <!--                                    android:textSize="18sp"-->
+                    <!--                                    android:textStyle="bold"/>-->
+                    <!--                            </androidx.gridlayout.widget.GridLayout>-->
+
+                    <!--                            &lt;!&ndash; Quantity & CS Quantity Inputs &ndash;&gt;-->
+                    <!--                            <androidx.gridlayout.widget.GridLayout-->
+                    <!--                                android:layout_width="match_parent"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:layout_marginBottom="5dp"-->
+                    <!--                                app:columnCount="4">-->
+
+                    <!--                                <TextView-->
+                    <!--                                    android:layout_width="wrap_content"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:layout_marginEnd="5dp"-->
+                    <!--                                    android:text="Qty"-->
+                    <!--                                    android:textSize="18sp"-->
+                    <!--                                    android:textStyle="bold"/>-->
+
+                    <!--                                <EditText-->
+                    <!--                                    android:id="@+id/etquantitynew"-->
+                    <!--                                    android:layout_width="0dp"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:background="@drawable/edittext_light"-->
+                    <!--                                    android:hint="0"-->
+                    <!--                                    android:inputType="textPersonName"-->
+                    <!--                                    android:maxLength="10"-->
+                    <!--                                    android:padding="8dp"-->
+                    <!--                                    app:layout_column="1"-->
+                    <!--                                    app:layout_columnWeight="1"-->
+                    <!--                                    app:layout_row="0"/>-->
+
+                    <!--                                <TextView-->
+                    <!--                                    android:layout_width="wrap_content"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:layout_marginStart="5dp"-->
+                    <!--                                    android:layout_marginEnd="5dp"-->
+                    <!--                                    android:text="CS-Qty"-->
+                    <!--                                    android:textSize="18sp"-->
+                    <!--                                    android:textStyle="bold"/>-->
+
+                    <!--                                <EditText-->
+                    <!--                                    android:id="@+id/etcsquantitynew"-->
+                    <!--                                    android:layout_width="0dp"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:background="@drawable/edittext_light"-->
+                    <!--                                    android:hint="0"-->
+                    <!--                                    android:inputType="textPersonName"-->
+                    <!--                                    android:maxLength="10"-->
+                    <!--                                    android:padding="8dp"-->
+                    <!--                                    app:layout_column="3"-->
+                    <!--                                    app:layout_columnWeight="1"-->
+                    <!--                                    app:layout_row="0"/>-->
+                    <!--                            </androidx.gridlayout.widget.GridLayout>-->
+
+                    <!--                        </LinearLayout>-->
+                    <!--                    </androidx.cardview.widget.CardView>-->
+
+                    <!--                    <androidx.gridlayout.widget.GridLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginBottom="5dp"-->
+                    <!--                        app:columnCount="2">-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginEnd="5dp"-->
+                    <!--                            android:text="Qty"-->
+                    <!--                            android:textSize="18sp"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            app:layout_column="0"-->
+                    <!--                            app:layout_row="0"/>-->
+
+                    <!--                        <EditText-->
+                    <!--                            android:id="@+id/etquantitynew"-->
+                    <!--                            android:layout_width="0dp"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:background="@drawable/edittext_light"-->
+                    <!--                            android:hint="0"-->
+                    <!--                            android:inputType="number"-->
+                    <!--                            android:maxLength="10"-->
+                    <!--                            android:padding="8dp"-->
+                    <!--                            app:layout_column="1"-->
+                    <!--                            app:layout_columnWeight="1"-->
+                    <!--                            app:layout_row="0"/>-->
+                    <!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <!--                    <androidx.gridlayout.widget.GridLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginBottom="5dp"-->
+                    <!--                        app:columnCount="2">-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginEnd="5dp"-->
+                    <!--                            android:text="CS-Qty"-->
+                    <!--                            android:textSize="18sp"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            app:layout_column="0"-->
+                    <!--                            app:layout_row="0"/>-->
+
+                    <!--                        <EditText-->
+                    <!--                            android:id="@+id/etcsquantitynew"-->
+                    <!--                            android:layout_width="0dp"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:autofillHints=""-->
+                    <!--                            android:background="@drawable/edittext_light"-->
+                    <!--                            android:hint="0"-->
+                    <!--                            android:inputType="number"-->
+                    <!--                            android:maxLength="10"-->
+                    <!--                            android:padding="8dp"-->
+                    <!--                            app:layout_column="1"-->
+                    <!--                            app:layout_columnWeight="1"-->
+                    <!--                            app:layout_row="0"/>-->
+                    <!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <!-- select product buttons section -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="1">
+
+                        <Button
+                            android:id="@+id/btadddetailsnewinv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Add to Invoice"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <Button
+                            android:id="@+id/btpaymentnew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Payment"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btcleardetailsnew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Clear Details"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:columnCount="2">
+
+                        <Button
+                            android:id="@+id/btadditemnew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Add Item"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btdeleteitemnew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Delete Item"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Invoice Details Header -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/darker_shade">
+
+                            <TextView
+                                android:id="@+id/tvdetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:text="Invoice Details"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Table Header Row -->
+                        <androidx.cardview.widget.CardView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/dark_gray">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp">
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Qty"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/textView2"
+                                    app:layout_constraintWidth_percent="0.1"/>
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/textView1"
+                                    app:layout_constraintEnd_toStartOf="@id/textView3"
+                                    app:layout_constraintWidth_percent="0.55"/>
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Unit Price"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/textView2"
+                                    app:layout_constraintEnd_toStartOf="@id/textView5"
+                                    app:layout_constraintWidth_percent="0.175"/>
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="T-Amount"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/textView3"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintWidth_percent="0.175"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--          excel grid view          -->
+
+                        <!-- Table Input Row -->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="2dp"-->
+<!--                            android:layout_marginBottom="2dp">-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/etqtynew"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:autofillHints=""-->
+<!--                                android:hint="qty"-->
+<!--                                android:background="@drawable/edittext_light"-->
+<!--                                android:inputType="textMultiLine"-->
+<!--                                android:textSize="11sp"-->
+<!--                                android:gravity="center"-->
+<!--                                tools:ignore="HardcodedText" />-->
+
+<!--                            &lt;!&ndash;android:visibility="invisible"&ndash;&gt;-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/etdecriptionnew"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_weight="3"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:autofillHints=""-->
+<!--                                android:hint="description"-->
+<!--                                android:background="@drawable/edittext_light"-->
+<!--                                android:inputType="textMultiLine"-->
+<!--                                android:textSize="11sp"-->
+<!--                                android:gravity="center"-->
+<!--                                tools:ignore="HardcodedText" />-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/etunitpricenew"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:autofillHints=""-->
+<!--                                android:hint="unit-price"-->
+<!--                                android:background="@drawable/edittext_light"-->
+<!--                                android:inputType="textMultiLine"-->
+<!--                                android:textSize="11sp"-->
+<!--                                android:gravity="center"-->
+<!--                                tools:ignore="HardcodedText" />-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/etamountnew"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:autofillHints=""-->
+<!--                                android:hint="t-amount"-->
+<!--                                android:background="@drawable/edittext_light"-->
+<!--                                android:inputType="textMultiLine"-->
+<!--                                android:textSize="11sp"-->
+<!--                                android:gravity="center"-->
+<!--                                tools:ignore="HardcodedText" />-->
+<!--                        </LinearLayout>-->
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ProductItemRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0.8dp"
+                            android:layout_marginRight="0.8dp"/>
+
+                        <!--          excel grid view          -->
+
+                        <!-- Total Quantity and Amount -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0.8dp"
+                            android:layout_marginRight="0.8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_cell"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <!-- Total Quantity Row -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Qty"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                    <TextView
+                                        android:id="@+id/tvtotalinvoiceqty"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="end"
+                                        tools:ignore="HardcodedText" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/black"
+                                    android:layout_marginVertical="6dp" />
+
+                                <!-- Total Amount Row -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Amount"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        tools:ignore="HardcodedText" />
+
+                                    <TextView
+                                        android:id="@+id/tvtotalinvoicamount"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.00"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/black"
+                                        android:gravity="end"
+                                        tools:ignore="HardcodedText" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <!-- Select Remarks -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Select Remarks"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <!-- deliver on due -->
+                        <Spinner
+                            android:id="@+id/spremarks"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/remarks"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- send and save invoice -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Send&amp;SaveInvoice"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- Send and Save Invoice Button -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        app:columnCount="1">
+
+                        <Button
+                            android:id="@+id/btsendsave"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="send"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- select product card view -->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

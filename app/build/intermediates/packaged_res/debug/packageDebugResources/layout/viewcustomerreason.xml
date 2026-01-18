@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".SendReason.ViewCustomerReason">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- Customer Code Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Code"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvcustomeridnoorderview"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="@string/registered_customer_code"
+                        android:textSize="14sp" />
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/darker_gray"-->
+<!--                        android:layout_marginVertical="5dp"/>-->
+
+                    <!-- Customer Name Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvcustomernamenoorderview"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="@string/registered_customer_name"
+                        android:textSize="14sp" />
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="@android:color/darker_gray"-->
+<!--                        android:layout_marginVertical="5dp"/>-->
+
+                    <!-- Customer Name Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date&amp;time"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvdatetimenoorderview"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="@string/date_and_time"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:id="@+id/tvterms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Select Reason"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <!-- First Column: Status Value -->
+
+                        <!-- Second Column: Term Status Label -->
+                        <TextView
+                            android:id="@+id/tvreasonselectedview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center"
+                            android:text="@string/_0"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0" />
+
+                        <TextView
+                            android:id="@+id/tvreasondescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/selected_reason"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            android:gravity="center" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:id="@+id/tvinvoicenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Other Reason"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <EditText
+                            android:id="@+id/tvotherreasonview"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:hint="@string/specify_your_reason"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <EditText
+                        android:id="@+id/editRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:background="@drawable/edittext_light"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:hint="Enter remarks here"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btsendreasonnoorderview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/resend_invoice"
+                        android:textSize="14sp"
+                        android:textColor="@drawable/button_text_selector"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

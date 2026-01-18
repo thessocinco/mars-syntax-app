@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_ram.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_ram.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\bankmap.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\bankmap.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\othercustomer.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\othercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\vansellingreturnnew.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturnnew.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_goodest.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_goodest.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\newinvoice.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\newinvoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\newothercustomer.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\newothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\row_invoice.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_invoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\customerdata.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\customerdata.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\activity_invoice.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\activity_invoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_lubs.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_lubs.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\salesinventory.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\salesinventory.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\install_progress.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\install_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\smsreceiver.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\smsreceiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_solane.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_solane.xml"
+    },
+    {
+        "merged": "com.marsIT.marsapp-mergeDebugResources-57:/layout/data_ram.xml",
+        "source": "com.marsIT.marsapp-main-60:/layout/data_ram.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\additeminventory.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\additeminventory.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\send_reason.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\send_reason.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_cc1.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_cc1.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_eq.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_eq.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\agrichemnewothercustomer.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\agrichemnewothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\row_invoice_dtl.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_invoice_dtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\paymentdetails.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\paymentdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\mainlayout.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\mainlayout.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\maintoolbar.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\maintoolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_agrichem.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_agrichem.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\row_inventory_item.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_inventory_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\customerdetails.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\customerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\layout_test.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\layout_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\startup.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\startup.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\not_yet_visited_customers.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\not_yet_visited_customers.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\ledger.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\ledger.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\agrichemcustomerdetails.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\agrichemcustomerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\viewloadingplan.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\viewloadingplan.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\additem.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\additem.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\consumernewothercustomer.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\consumernewothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_peerless.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_peerless.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\consumercustomerdetails.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\consumercustomerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_cc2.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_cc2.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\vansellingreturndtl.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturndtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\vansellingreturn.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturn.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_belo.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_belo.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_urc.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_urc.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\viewcustomerreason.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\viewcustomerreason.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_lamoiyan.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_lamoiyan.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\data_montosco.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_montosco.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\invoicedtl.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\invoicedtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-mergeDebugResources-57:\\layout\\vansellingloadingplan.xml",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingloadingplan.xml"
+    }
+]

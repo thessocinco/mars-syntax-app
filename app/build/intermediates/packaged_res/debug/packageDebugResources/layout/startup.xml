@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:name=".MarsAppStartUp.Startup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/mars_logo"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/company_logo"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/mars_agri_ventures_amp_commodities_incorporated"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black" />
+
+        <!--  StartUp version.text  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/version_6_25_1"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="50dp"
+            tools:ignore="SmallSp" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scrollbars="none"
+            tools:ignore="NestedScrolling">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:isScrollContainer="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:stretchColumns="1"
+                tools:ignore="ScrollViewSize">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salesman ID"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spsalesmanst"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/salesmanlistarr"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selling Type"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spsellingtypest"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/sellingtype"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mapper ID"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etInsmapperid"
+                    android:layout_width="match_parent"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_textview"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="Enter Mapper ID"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Department"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spdepartmentst"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/departmentcode"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Week Schedule"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spweekschedst"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/weeksched"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Base Name"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spdatabasenamest"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/databasename"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lock Location?Y/N"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/sploclocationst"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/loclocation"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schedule Process?Y/N"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spschedprocessst"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/loclocation"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textView631"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schedule Day Lock?Y/N"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="2">
+
+                    <Spinner
+                        android:id="@+id/spschedday"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_light"
+                        android:entries="@array/loclocation"
+                        app:layout_columnWeight="1" />
+                </androidx.gridlayout.widget.GridLayout>
+
+                <TextView
+                    android:id="@+id/textViewXX3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LICENCE KEY"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etpasswordins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_textview"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:hint="Enter License Key"
+                    android:minHeight="48dp"
+                    android:textSize="14sp"
+                    tools:ignore="Deprecated,HardcodedText" />
+
+                <Button
+                    android:id="@+id/btokinstall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="Install"
+                    android:textColor="@drawable/button_text_selector"
+                    android:background="@drawable/bg_button"
+                    android:radius="16dp"
+                    android:stateListAnimator="@null"
+                    tools:ignore="HardcodedText" />
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>

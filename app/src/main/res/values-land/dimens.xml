@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">20dp</dimen>  <!-- Slightly larger margin for landscape -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+</resources>

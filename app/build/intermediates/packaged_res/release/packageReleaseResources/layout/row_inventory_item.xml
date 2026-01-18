@@ -1,0 +1,60 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/etitemsview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/border_cell"
+        android:gravity="center"
+        android:minHeight="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/etbegview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <TextView
+        android:id="@+id/etbegview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:gravity="center"
+        android:background="@drawable/border_cell"
+        android:maxLines="5"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etitemsview"
+        app:layout_constraintEnd_toStartOf="@id/etsalesview"
+        app:layout_constraintWidth_percent="0.150"/>
+
+    <TextView
+        android:id="@+id/etsalesview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minHeight="40dp"
+        android:gravity="center"
+        android:background="@drawable/border_cell"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etbegview"
+        app:layout_constraintEnd_toStartOf="@id/etEinvview"
+        app:layout_constraintWidth_percent="0.150"/>
+
+    <TextView
+        android:id="@+id/etEinvview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minHeight="40dp"
+        android:gravity="center"
+        android:background="@drawable/border_cell"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etsalesview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.150"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

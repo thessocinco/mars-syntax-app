@@ -1,0 +1,690 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.marsIT.marsapp"
+4    android:versionCode="1"
+5    android:versionName="6.25.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="36" />
+10
+11    <!-- Permissions Start -->
+12    <!-- Precise Location (ACCESS_FINE_LOCATION) -->
+13    <!--
+14          * For GPS (Global Positioning System)
+15          * Wi-Fi
+16          * Cellular networks
+17          * Bluetooth (for Android 8.0 and higher)
+18    -->
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:13:5-79
+19-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:13:22-76
+20
+21    <!--
+22          * For Wi-Fi
+23          * Cell tower signals
+24          * Other network-based methods (like IP address)
+25    -->
+26    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+26-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:20:5-81
+26-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:20:22-78
+27
+28    <!-- Telephony Permissions -->
+29    <uses-permission android:name="android.permission.SEND_SMS" />
+29-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:23:5-67
+29-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:23:22-64
+30    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+30-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:24:5-70
+30-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:24:22-67
+31    <uses-permission android:name="android.permission.READ_SMS" />
+31-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:25:5-67
+31-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:25:22-64
+32    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+32-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:26:5-76
+32-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:26:22-74
+33
+34    <!-- This ensures that the app only installs on devices with GPS and SMS capabilities -->
+35    <!-- Telephony Hardware Feature to enable all the Telephony Permission -->
+36    <uses-permission android:name="android.permission.USE_SIP" />
+36-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:30:5-66
+36-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:30:22-63
+37
+38    <uses-feature
+38-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:32:5-90
+39        android:name="android.hardware.location.gps"
+39-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:32:19-63
+40        android:required="false" />
+40-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:32:64-88
+41    <uses-feature
+41-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:33:5-88
+42        android:name="android.hardware.telephony"
+42-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:33:19-60
+43        android:required="false" />
+43-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:33:61-85
+44
+45    <uses-permission android:name="android.permission.WAKE_LOCK" />
+45-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:23:5-68
+45-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:23:22-65
+46    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+46-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:24:5-79
+46-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:24:22-76
+47    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+47-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:25:5-81
+47-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:25:22-78
+48    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+48-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:26:5-77
+48-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:26:22-74
+49
+50    <permission
+50-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+51        android:name="com.marsIT.marsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+52        android:protectionLevel="signature" />
+52-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+53
+54    <uses-permission android:name="com.marsIT.marsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Permissions End -->
+54-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+54-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+55    <application
+55-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:36:5-237:19
+56        android:allowBackup="true"
+56-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:37:9-35
+57        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+57-->[androidx.core:core:1.13.0] C:\Users\JRP\.gradle\caches\8.9\transforms\782128bdf5fbd99326dd950c2e25a983\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+58        android:dataExtractionRules="@xml/data_extraction_rules"
+58-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:38:9-65
+59        android:debuggable="true"
+60        android:extractNativeLibs="true"
+61        android:fullBackupContent="@xml/backup_rules"
+61-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:39:9-54
+62        android:icon="@mipmap/ic_launcher_marslogo"
+62-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:40:9-52
+63        android:label="@string/app_name"
+63-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:41:9-41
+64        android:roundIcon="@mipmap/ic_launcher_marslogo_round"
+64-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:42:9-63
+65        android:supportsRtl="true"
+65-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:43:9-35
+66        android:testOnly="true"
+67        android:theme="@style/Theme.MarsApp" >
+67-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:44:9-45
+68
+69        <!-- android:theme="@style/Theme.MarsApp" -->
+70
+71
+72        <!-- for Maps APIs -->
+73        <!-- <meta-data -->
+74        <!-- android:name="com.google.android.geo.API_KEY" -->
+75        <!-- android:value="YOUR_GOOGLE_MAPS_API_KEY"/> -->
+76
+77        <activity
+77-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:54:9-56:40
+78            android:name="com.marsIT.marsapp.MarsAppStartUp.Startup"
+78-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:55:13-51
+79            android:exported="false" />
+79-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:56:13-37
+80        <activity
+80-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:58:9-65:20
+81            android:name="com.marsIT.marsapp.MainProgram.MainActivity"
+81-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:59:13-53
+82            android:exported="true" >
+82-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:60:13-36
+83            <intent-filter>
+83-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:61:13-64:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:62:17-69
+84-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:62:25-66
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:63:17-77
+86-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:63:27-74
+87            </intent-filter>
+88        </activity>
+89
+90        <!-- Receiver with exported attribute -->
+91        <receiver
+91-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:68:9-75:20
+92            android:name="com.marsIT.marsapp.Receiver.SMSReceiver"
+92-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:69:13-49
+93            android:exported="true"
+93-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:71:13-36
+94            android:permission="android.permission.BROADCAST_SMS" >
+94-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:70:13-66
+95            <intent-filter android:priority="999" >
+95-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:72:13-74:29
+95-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:72:28-50
+96                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+96-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:73:17-82
+96-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:73:25-79
+97            </intent-filter>
+98        </receiver>
+99
+100        <!-- Additional Activities -->
+101
+102
+103        <!-- TEST -->
+104        <!-- <activity android:name=".NotVisitedCustomersActivity" /> -->
+105        <!-- TEST -->
+106
+107
+108        <!-- disabled -->
+109        <!-- <activity android:name=".InstallProgress.InstallProgress" /> -->
+110
+111        <activity
+111-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:86:9-88:63
+112            android:name="com.marsIT.marsapp.SendReason.SendReason"
+112-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:87:13-50
+113            android:label="@string/title_activity_no_order" />
+113-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:88:13-60
+114        <activity
+114-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:90:9-92:66
+115            android:name="com.marsIT.marsapp.InvoiceData.NewInvoice"
+115-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:91:13-51
+116            android:label="@string/title_activity_new_invoice" />
+116-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:92:13-63
+117        <activity
+117-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:94:9-96:80
+118            android:name="com.marsIT.marsapp.CustomerData.AgrichemCustomerDetails"
+118-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:95:13-65
+119            android:label="@string/title_activity_agrichem_customer_details" />
+119-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:96:13-77
+120        <activity
+120-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:98:9-100:71
+121            android:name="com.marsIT.marsapp.CustomerData.CustomerDetails"
+121-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:99:13-57
+122            android:label="@string/title_activity_customer_details" />
+122-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:100:13-68
+123        <activity
+123-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:102:9-104:70
+124            android:name="com.marsIT.marsapp.Inventory.SalesInventory"
+124-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:103:13-53
+125            android:label="@string/title_activity_sales_inventory" />
+125-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:104:13-67
+126        <activity
+126-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:106:9-108:80
+127            android:name="com.marsIT.marsapp.CustomerData.ConsumerCustomerDetails"
+127-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:107:13-65
+128            android:label="@string/title_activity_consumer_customer_details" />
+128-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:108:13-77
+129        <activity
+129-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:110:9-112:73
+130            android:name="com.marsIT.marsapp.CustomerData.NewOtherCustomer"
+130-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:111:13-58
+131            android:label="@string/title_activity_new_other_customer" />
+131-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:112:13-70
+132        <activity
+132-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:114:9-116:82
+133            android:name="com.marsIT.marsapp.CustomerData.ConsumerNewOtherCustomer"
+133-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:115:13-66
+134            android:label="@string/title_activity_consumer_new_other_customer" />
+134-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:116:13-79
+135        <activity
+135-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:118:9-120:82
+136            android:name="com.marsIT.marsapp.CustomerData.AgrichemNewOtherCustomer"
+136-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:119:13-66
+137            android:label="@string/title_activity_agrichem_new_other_customer" />
+137-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:120:13-79
+138        <activity
+138-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:122:9-124:78
+139            android:name="com.marsIT.marsapp.VanSelling.VansellingLoadingPlan"
+139-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:123:13-61
+140            android:label="@string/title_activity_vanselling_loading_plan" />
+140-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:124:13-75
+141        <activity
+141-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:126:9-128:69
+142            android:name="com.marsIT.marsapp.CustomerData.OtherCustomer"
+142-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:127:13-55
+143            android:label="@string/title_activity_other_customer" />
+143-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:128:13-66
+144
+145        <!-- <activity android:name=".Startup" -->
+146        <!-- android:label="@string/title_activity_startup" /> -->
+147
+148        <activity
+148-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:133:9-135:70
+149            android:name="com.marsIT.marsapp.Inventory.PaymentDetails"
+149-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:134:13-53
+150            android:label="@string/title_activity_payment_details" />
+150-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:135:13-67
+151        <activity
+151-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:137:9-139:63
+152            android:name="com.marsIT.marsapp.Inventory.AddItem"
+152-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:138:13-46
+153            android:label="@string/title_activity_add_item" />
+153-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:139:13-60
+154        <activity
+154-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:141:9-143:73
+155            android:name="com.marsIT.marsapp.Inventory.AddItemInventory"
+155-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:142:13-55
+156            android:label="@string/title_activity_add_item_inventory" />
+156-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:143:13-70
+157        <activity
+157-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:145:9-147:63
+158            android:name="com.marsIT.marsapp.BankMap.BankMap"
+158-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:146:13-44
+159            android:label="@string/title_activity_bank_map" />
+159-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:147:13-60
+160        <activity
+160-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:149:9-151:68
+161            android:name="com.marsIT.marsapp.CustomerData.CustomerData"
+161-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:150:13-54
+162            android:label="@string/title_activity_customer_data" />
+162-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:151:13-65
+163        <activity
+163-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:153:9-155:66
+164            android:name="com.marsIT.marsapp.InvoiceData.InvoiceDtl"
+164-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:154:13-51
+165            android:label="@string/title_activity_invoice_dtl" />
+165-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:155:13-63
+166        <activity
+166-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:157:9-159:75
+167            android:name="com.marsIT.marsapp.SendReason.ViewCustomerReason"
+167-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:158:13-58
+168            android:label="@string/title_activity_view_customer_reason" />
+168-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:159:13-72
+169        <activity
+169-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:161:9-163:72
+170            android:name="com.marsIT.marsapp.Inventory.ViewLoadingPlan"
+170-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:162:13-54
+171            android:label="@string/title_activity_view_loading_plan" />
+171-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:163:13-69
+172        <activity
+172-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:165:9-167:72
+173            android:name="com.marsIT.marsapp.VanSelling.VansellingReturn"
+173-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:166:13-56
+174            android:label="@string/title_activity_vanselling_return" />
+174-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:167:13-69
+175        <activity
+175-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:169:9-171:76
+176            android:name="com.marsIT.marsapp.VanSelling.VansellingReturnNew"
+176-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:170:13-59
+177            android:label="@string/title_activity_vanselling_return_new" />
+177-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:171:13-73
+178        <activity
+178-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:173:9-175:76
+179            android:name="com.marsIT.marsapp.VanSelling.VansellingReturnDtl"
+179-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:174:13-59
+180            android:label="@string/title_activity_vanselling_return_dtl" />
+180-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:175:13-73
+181        <activity
+181-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:177:9-179:61
+182            android:name="com.marsIT.marsapp.Inventory.Ledger"
+182-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:178:13-45
+183            android:label="@string/title_activity_ledger" />
+183-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:179:13-58
+184
+185        <!-- UpdateSQLpackages Data; Setup Here -->
+186        <activity
+186-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:183:9-185:61
+187            android:name="com.marsIT.marsapp.UpdateSQLpackages.AgriChemData"
+187-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:184:13-59
+188            android:label="@string/title_activity_eqdata" />
+188-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:185:13-58
+189        <activity
+189-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:187:9-189:61
+190            android:name="com.marsIT.marsapp.UpdateSQLpackages.BeloData"
+190-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:188:13-55
+191            android:label="@string/title_activity_eqdata" />
+191-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:189:13-58
+192        <activity
+192-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:191:9-193:68
+193            android:name="com.marsIT.marsapp.UpdateSQLpackages.Century1Data"
+193-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:192:13-59
+194            android:label="@string/title_activity_century1_data" />
+194-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:193:13-65
+195        <activity
+195-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:195:9-197:68
+196            android:name="com.marsIT.marsapp.UpdateSQLpackages.Century2Data"
+196-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:196:13-59
+197            android:label="@string/title_activity_century2_data" />
+197-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:197:13-65
+198        <activity
+198-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:199:9-201:61
+199            android:name="com.marsIT.marsapp.UpdateSQLpackages.EqData"
+199-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:200:13-53
+200            android:label="@string/title_activity_eqdata" />
+200-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:201:13-58
+201        <activity
+201-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:203:9-205:61
+202            android:name="com.marsIT.marsapp.UpdateSQLpackages.GoodestData"
+202-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:204:13-58
+203            android:label="@string/title_activity_eqdata" />
+203-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:205:13-58
+204        <activity
+204-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:207:9-209:61
+205            android:name="com.marsIT.marsapp.UpdateSQLpackages.MultiLinesData"
+205-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:208:13-61
+206            android:label="@string/title_activity_eqdata" />
+206-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:209:13-58
+207        <activity
+207-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:211:9-213:61
+208            android:name="com.marsIT.marsapp.UpdateSQLpackages.LubricantsData"
+208-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:212:13-61
+209            android:label="@string/title_activity_eqdata" />
+209-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:213:13-58
+210        <activity
+210-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:215:9-217:67
+211            android:name="com.marsIT.marsapp.UpdateSQLpackages.MontoscoData"
+211-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:216:13-59
+212            android:label="@string/title_activity_montoscodata" />
+212-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:217:13-64
+213        <activity
+213-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:219:9-221:63
+214            android:name="com.marsIT.marsapp.UpdateSQLpackages.PeerlessData"
+214-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:220:13-59
+215            android:label="@string/title_activity_urc_data" />
+215-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:221:13-60
+216        <activity
+216-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:223:9-225:63
+217            android:name="com.marsIT.marsapp.UpdateSQLpackages.SolaneData"
+217-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:224:13-57
+218            android:label="@string/title_activity_urc_data" />
+218-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:225:13-60
+219        <activity
+219-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:227:9-229:63
+220            android:name="com.marsIT.marsapp.UpdateSQLpackages.UrcData"
+220-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:228:13-54
+221            android:label="@string/title_activity_urc_data" />
+221-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:229:13-60
+222        <!-- UpdateSQLpackages Data -->
+223
+224        <activity
+224-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:232:9-234:63
+225            android:name="com.marsIT.marsapp.UpdateSQLpackages.RamData"
+225-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:233:13-54
+226            android:label="@string/title_activity_urc_data" />
+226-->C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp13\app\src\main\AndroidManifest.xml:234:13-60
+227        <!-- UpdateSQLpackages Data -->
+228
+229        <activity
+229-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\JRP\.gradle\caches\8.9\transforms\b4ca6a6707d770fd46a2c8b622f50af6\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+230            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+230-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\JRP\.gradle\caches\8.9\transforms\b4ca6a6707d770fd46a2c8b622f50af6\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+231            android:exported="false"
+231-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\JRP\.gradle\caches\8.9\transforms\b4ca6a6707d770fd46a2c8b622f50af6\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+232            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+232-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\JRP\.gradle\caches\8.9\transforms\b4ca6a6707d770fd46a2c8b622f50af6\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+233
+234        <meta-data
+234-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\e3e2378fc72d1e6f616753ac23c578d3\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+235            android:name="com.google.android.gms.version"
+235-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\e3e2378fc72d1e6f616753ac23c578d3\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+236            android:value="@integer/google_play_services_version" />
+236-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\e3e2378fc72d1e6f616753ac23c578d3\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+237
+238        <provider
+238-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:29:9-37:20
+239            android:name="androidx.startup.InitializationProvider"
+239-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:30:13-67
+240            android:authorities="com.marsIT.marsapp.androidx-startup"
+240-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:31:13-68
+241            android:exported="false" >
+241-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:32:13-37
+242            <meta-data
+242-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:34:13-36:52
+243                android:name="androidx.work.WorkManagerInitializer"
+243-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:35:17-68
+244                android:value="androidx.startup" />
+244-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:36:17-49
+245            <meta-data
+245-->[androidx.emoji2:emoji2:1.3.0] C:\Users\JRP\.gradle\caches\8.9\transforms\afd6a8ad1af256694613109680409048\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+246                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+246-->[androidx.emoji2:emoji2:1.3.0] C:\Users\JRP\.gradle\caches\8.9\transforms\afd6a8ad1af256694613109680409048\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+247                android:value="androidx.startup" />
+247-->[androidx.emoji2:emoji2:1.3.0] C:\Users\JRP\.gradle\caches\8.9\transforms\afd6a8ad1af256694613109680409048\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+248            <meta-data
+248-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\JRP\.gradle\caches\8.9\transforms\a790581b1da8c7ae305fec0c683d6a42\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+249                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+249-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\JRP\.gradle\caches\8.9\transforms\a790581b1da8c7ae305fec0c683d6a42\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+250                android:value="androidx.startup" />
+250-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\JRP\.gradle\caches\8.9\transforms\a790581b1da8c7ae305fec0c683d6a42\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+251            <meta-data
+251-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+252                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+252-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+253                android:value="androidx.startup" />
+253-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+254        </provider>
+255
+256        <service
+256-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:39:9-45:35
+257            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+257-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:40:13-88
+258            android:directBootAware="false"
+258-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:41:13-44
+259            android:enabled="@bool/enable_system_alarm_service_default"
+259-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:42:13-72
+260            android:exported="false" />
+260-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:43:13-37
+261        <service
+261-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:46:9-52:35
+262            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+262-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:47:13-84
+263            android:directBootAware="false"
+263-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:48:13-44
+264            android:enabled="@bool/enable_system_job_service_default"
+264-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:49:13-70
+265            android:exported="true"
+265-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:50:13-36
+266            android:permission="android.permission.BIND_JOB_SERVICE" />
+266-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:51:13-69
+267        <service
+267-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:53:9-59:35
+268            android:name="androidx.work.impl.foreground.SystemForegroundService"
+268-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:54:13-81
+269            android:directBootAware="false"
+269-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:55:13-44
+270            android:enabled="@bool/enable_system_foreground_service_default"
+270-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:56:13-77
+271            android:exported="false" />
+271-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:57:13-37
+272
+273        <receiver
+273-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:61:9-66:35
+274            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+274-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:62:13-88
+275            android:directBootAware="false"
+275-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:63:13-44
+276            android:enabled="true"
+276-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:64:13-35
+277            android:exported="false" />
+277-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:65:13-37
+278        <receiver
+278-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:67:9-77:20
+279            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+279-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:68:13-106
+280            android:directBootAware="false"
+280-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:69:13-44
+281            android:enabled="false"
+281-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:70:13-36
+282            android:exported="false" >
+282-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:71:13-37
+283            <intent-filter>
+283-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:73:13-76:29
+284                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+284-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:74:17-87
+284-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:74:25-84
+285                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+285-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:75:17-90
+285-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:75:25-87
+286            </intent-filter>
+287        </receiver>
+288        <receiver
+288-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:78:9-88:20
+289            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+289-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:79:13-104
+290            android:directBootAware="false"
+290-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:80:13-44
+291            android:enabled="false"
+291-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:81:13-36
+292            android:exported="false" >
+292-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:82:13-37
+293            <intent-filter>
+293-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:84:13-87:29
+294                <action android:name="android.intent.action.BATTERY_OKAY" />
+294-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:85:17-77
+294-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:85:25-74
+295                <action android:name="android.intent.action.BATTERY_LOW" />
+295-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:86:17-76
+295-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:86:25-73
+296            </intent-filter>
+297        </receiver>
+298        <receiver
+298-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:89:9-99:20
+299            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+299-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:90:13-104
+300            android:directBootAware="false"
+300-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:91:13-44
+301            android:enabled="false"
+301-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:92:13-36
+302            android:exported="false" >
+302-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:93:13-37
+303            <intent-filter>
+303-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:95:13-98:29
+304                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+304-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:96:17-83
+304-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:96:25-80
+305                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+305-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:97:17-82
+305-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:97:25-79
+306            </intent-filter>
+307        </receiver>
+308        <receiver
+308-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:100:9-109:20
+309            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+309-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:101:13-103
+310            android:directBootAware="false"
+310-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:102:13-44
+311            android:enabled="false"
+311-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:103:13-36
+312            android:exported="false" >
+312-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:104:13-37
+313            <intent-filter>
+313-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:106:13-108:29
+314                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+314-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:107:17-79
+314-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:107:25-76
+315            </intent-filter>
+316        </receiver>
+317        <receiver
+317-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:110:9-121:20
+318            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+318-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:111:13-88
+319            android:directBootAware="false"
+319-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:112:13-44
+320            android:enabled="false"
+320-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:113:13-36
+321            android:exported="false" >
+321-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:114:13-37
+322            <intent-filter>
+322-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:116:13-120:29
+323                <action android:name="android.intent.action.BOOT_COMPLETED" />
+323-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:117:17-79
+323-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:117:25-76
+324                <action android:name="android.intent.action.TIME_SET" />
+324-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:118:17-73
+324-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:118:25-70
+325                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+325-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:119:17-81
+325-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:119:25-78
+326            </intent-filter>
+327        </receiver>
+328        <receiver
+328-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:122:9-131:20
+329            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+329-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:123:13-99
+330            android:directBootAware="false"
+330-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:124:13-44
+331            android:enabled="@bool/enable_system_alarm_service_default"
+331-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:125:13-72
+332            android:exported="false" >
+332-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:126:13-37
+333            <intent-filter>
+333-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:128:13-130:29
+334                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+334-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:129:17-98
+334-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:129:25-95
+335            </intent-filter>
+336        </receiver>
+337        <receiver
+337-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:132:9-142:20
+338            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+338-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:133:13-78
+339            android:directBootAware="false"
+339-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:134:13-44
+340            android:enabled="true"
+340-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:135:13-35
+341            android:exported="true"
+341-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:136:13-36
+342            android:permission="android.permission.DUMP" >
+342-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:137:13-57
+343            <intent-filter>
+343-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:139:13-141:29
+344                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+344-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:140:17-88
+344-->[androidx.work:work-runtime:2.10.1] C:\Users\JRP\.gradle\caches\8.9\transforms\3e33f03cea02e46a265a28b42e231479\transformed\work-runtime-2.10.1\AndroidManifest.xml:140:25-85
+345            </intent-filter>
+346        </receiver>
+347
+348        <uses-library
+348-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+349            android:name="androidx.window.extensions"
+349-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+350            android:required="false" />
+350-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+351        <uses-library
+351-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+352            android:name="androidx.window.sidecar"
+352-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+353            android:required="false" />
+353-->[androidx.window:window:1.0.0] C:\Users\JRP\.gradle\caches\8.9\transforms\7130a705a45ecb4853a3225e271039e2\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+354
+355        <receiver
+355-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+356            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+356-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+357            android:directBootAware="false"
+357-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+358            android:enabled="true"
+358-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+359            android:exported="true"
+359-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+360            android:permission="android.permission.DUMP" >
+360-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+361            <intent-filter>
+361-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+362                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+362-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+362-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+363            </intent-filter>
+364            <intent-filter>
+364-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+365                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+365-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+365-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+366            </intent-filter>
+367            <intent-filter>
+367-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+368                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+368-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+368-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+369            </intent-filter>
+370            <intent-filter>
+370-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+371                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+371-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+371-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\JRP\.gradle\caches\8.9\transforms\94b6a7a9729abfa7f84de9f921cde243\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+372            </intent-filter>
+373        </receiver>
+374
+375        <service
+375-->[androidx.room:room-runtime:2.6.1] C:\Users\JRP\.gradle\caches\8.9\transforms\70124cc3fa600b6865d00460c3398490\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+376            android:name="androidx.room.MultiInstanceInvalidationService"
+376-->[androidx.room:room-runtime:2.6.1] C:\Users\JRP\.gradle\caches\8.9\transforms\70124cc3fa600b6865d00460c3398490\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+377            android:directBootAware="true"
+377-->[androidx.room:room-runtime:2.6.1] C:\Users\JRP\.gradle\caches\8.9\transforms\70124cc3fa600b6865d00460c3398490\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+378            android:exported="false" />
+378-->[androidx.room:room-runtime:2.6.1] C:\Users\JRP\.gradle\caches\8.9\transforms\70124cc3fa600b6865d00460c3398490\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+379    </application>
+380
+381</manifest>

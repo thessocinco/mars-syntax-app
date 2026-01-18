@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.marsIT.marsapp-mergeReleaseResources-56:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\JRP\\.gradle\\caches\\8.9\\transforms\\5388f4ce1c4322a28fc05719335980db\\transformed\\appcompat-1.7.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

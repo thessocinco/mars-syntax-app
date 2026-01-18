@@ -1,0 +1,382 @@
+[
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_smsreceiver.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\smsreceiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_agrichem.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_agrichem.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_button_text_selector.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\button_text_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_startup.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\startup.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_vansellingreturnnew.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturnnew.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\menu_kebabmenu.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\menu\\kebabmenu.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_layout_test.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\layout_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_maintoolbar.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\maintoolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-anydpi-v26_ic_launcher_marslogo_round.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-anydpi-v26\\ic_launcher_marslogo_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_customerdetails.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\customerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_belo.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_belo.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_vansellingloadingplan.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingloadingplan.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_salesinventory.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\salesinventory.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxhdpi_ic_launcher_marslogo.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxhdpi\\ic_launcher_marslogo.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-mdpi_ic_launcher_marslogo_foreground.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-mdpi\\ic_launcher_marslogo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_viewloadingplan.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\viewloadingplan.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_paymentdetails.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\paymentdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_activity_invoice.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\activity_invoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_urc.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_urc.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_lubs.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_lubs.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_goodest.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_goodest.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_ic_dropdown.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\ic_dropdown.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxxhdpi_ic_launcher_marslogo_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxxhdpi\\ic_launcher_marslogo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_edittext_light.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\edittext_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_icons8_search.gif.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\icons8_search.gif"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_eq.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_eq.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_cc2.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_cc2.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_row_inventory_item.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_inventory_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_solane.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_solane.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_border_cell.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\border_cell.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-pngs-54:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_ic_launcher_marslogo_background.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\ic_launcher_marslogo_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_customerdata.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\customerdata.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_row_invoice.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_invoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxxhdpi_ic_launcher_marslogo.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxxhdpi\\ic_launcher_marslogo.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_invoicedtl.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\invoicedtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-anydpi-v26_ic_launcher_marslogo.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-anydpi-v26\\ic_launcher_marslogo.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_ledger.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\ledger.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxhdpi_ic_launcher_marslogo_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxhdpi\\ic_launcher_marslogo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_vansellingreturn.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturn.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_install_progress.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\install_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_consumernewothercustomer.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\consumernewothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-mdpi_ic_launcher_marslogo.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-mdpi\\ic_launcher_marslogo.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_mainlayout.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\mainlayout.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_newothercustomer.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\newothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_newinvoice.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\newinvoice.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxxhdpi_ic_launcher_marslogo_foreground.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxxhdpi\\ic_launcher_marslogo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_peerless.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_peerless.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_spinner_border.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\spinner_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-hdpi_ic_launcher_marslogo.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-hdpi\\ic_launcher_marslogo.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-mdpi_ic_launcher_marslogo_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-mdpi\\ic_launcher_marslogo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xhdpi_ic_launcher_marslogo_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xhdpi\\ic_launcher_marslogo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_montosco.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_montosco.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xhdpi_ic_launcher_marslogo_foreground.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xhdpi\\ic_launcher_marslogo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xhdpi_ic_launcher_marslogo.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xhdpi\\ic_launcher_marslogo.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_send_reason.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\send_reason.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-xxhdpi_ic_launcher_marslogo_foreground.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-xxhdpi\\ic_launcher_marslogo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_viewcustomerreason.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\viewcustomerreason.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_othercustomer.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\othercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_vansellingreturndtl.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\vansellingreturndtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_mars_logo.png.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\mars_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_additeminventory.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\additeminventory.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_rounded_textview.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\rounded_textview.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_agrichemcustomerdetails.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\agrichemcustomerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_bankmap.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\bankmap.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_spinner_light.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\spinner_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_row_invoice_dtl.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\row_invoice_dtl.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_consumercustomerdetails.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\consumercustomerdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_cc1.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_cc1.xml"
+    },
+    {
+        "merged": "com.marsIT.marsapp-debug-58:/layout_data_ram.xml.flat",
+        "source": "com.marsIT.marsapp-main-60:/layout/data_ram.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-hdpi_ic_launcher_marslogo_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-hdpi\\ic_launcher_marslogo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\drawable_bg_button.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\drawable\\bg_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_not_yet_visited_customers.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\not_yet_visited_customers.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_lamoiyan.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_lamoiyan.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_agrichemnewothercustomer.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\agrichemnewothercustomer.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_data_ram.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\data_ram.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\layout_additem.xml.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\layout\\additem.xml"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-debug-58:\\mipmap-hdpi_ic_launcher_marslogo_foreground.webp.flat",
+        "source": "C:\\Users\\JRP\\.gradle\\daemon\\8.9\\com.marsIT.marsapp-main-60:\\mipmap-hdpi\\ic_launcher_marslogo_foreground.webp"
+    }
+]

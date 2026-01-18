@@ -1,0 +1,6 @@
+com.marsIT.marsapp.test.app-jetified-tracing-1.2.0-0 C:\Users\JRP\.gradle\caches\8.9\transforms\5ab62e8b97981ca8ae63d15812e7a3c7\transformed\jetified-tracing-1.2.0\res
+com.marsIT.marsapp.test.app-jetified-core-1.6.1-1 C:\Users\JRP\.gradle\caches\8.9\transforms\a8e9a1630c7b6a5226ddd48d138978d7\transformed\jetified-core-1.6.1\res
+com.marsIT.marsapp.test.app-androidTest-2 C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp\app\build\generated\res\resValues\androidTest\debug
+com.marsIT.marsapp.test.app-mergeDebugAndroidTestResources-3 C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.marsIT.marsapp.test.app-mergeDebugAndroidTestResources-4 C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.marsIT.marsapp.test.app-debugAndroidTest-5 C:\Users\JRP\Downloads\MarsAppDevelopment\MarsApp\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">18dp</dimen>  <!-- Adjust to a reasonable value -->
+    <dimen name="activity_horizontal_margin">18dp</dimen>
+    <dimen name="activity_vertical_margin">18dp</dimen>
+</resources>

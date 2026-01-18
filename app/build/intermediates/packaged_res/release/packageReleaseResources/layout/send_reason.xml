@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".SendReason.SendReason">
+
+    <include layout="@layout/maintoolbar"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- Customer Code Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Code"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvcustomeridnoorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="Registered Customer Code"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp"/>
+
+                    <!-- Customer Name Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvcustomernamenoorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:hint="Registered Customer Name"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp"/>
+
+                    <!-- Transaction Type Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Transaction Type"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+<!--                    &lt;!&ndash; GridLayout for Radio Buttons &ndash;&gt;-->
+<!--                    <androidx.gridlayout.widget.GridLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:alignmentMode="alignMargins"-->
+<!--                        app:columnCount="2">-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/rbin"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="IN"-->
+<!--                            android:onClick="onRadioButtonClicked"-->
+<!--                            android:gravity="center"-->
+<!--                            app:layout_columnWeight="1"/>-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/rbout"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="OUT"-->
+<!--                            android:onClick="onRadioButtonClicked"-->
+<!--                            android:gravity="center"-->
+<!--                            app:layout_columnWeight="1"/>-->
+<!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignmentMode="alignMargins"
+                        app:columnCount="2">
+
+                        <!-- Wrap RadioButtons in a RadioGroup to ensure exclusivity -->
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:text="IN"
+                                android:onClick="onRadioButtonClicked"
+                                tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+                            <RadioButton
+                                android:id="@+id/rbout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="OUT"
+                                android:onClick="onRadioButtonClicked"
+                                tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+                            <RadioButton
+                                android:id="@+id/rbother"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="OTHER REASON"
+                                android:onClick="onRadioButtonClicked"
+                                tools:ignore="HardcodedText,UsingOnClickInXml" />
+                        </RadioGroup>
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:id="@+id/tvterms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Select Reason"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <Spinner
+                            android:id="@+id/spreasonnoorder"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/reason"
+                            app:layout_columnWeight="1"/>
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:id="@+id/tvinvoicenumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Other Reason"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <EditText
+                            android:id="@+id/etotherreasonnoorder"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Specify Your Reason"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <Button
+                        android:id="@+id/btsendreasonnoorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:background="@drawable/bg_button"
+                        android:textColor="@drawable/button_text_selector"
+                        android:layout_marginTop="5dp"
+                        android:text="Send Reason"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

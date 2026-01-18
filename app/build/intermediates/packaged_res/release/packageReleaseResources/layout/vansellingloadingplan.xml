@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".VanSelling.VansellingLoadingPlan">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- Customer Code Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VanSelling Loading Plan"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <!-- select outlet, category, delivery date, search item, barcode button card view -->
+                    <!-- select outlet -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Select Outlet"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/spoutletnewinvvl"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/outlet"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- search item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Item Description"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etqueryproductvl"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Search Item"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <!-- select product -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Product"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- select product item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="1">
+
+                        <Spinner
+                            android:id="@+id/spproductnewvl"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_light" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="UM"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvumnewinvoicevl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_light"
+                            android:hint="0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText,TextViewEdits,DuplicateSpeakableTextCheck" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- unit of measure and cases -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unit Price&amp;Quantity"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Unit Price"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etunitpricevl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="QTY"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etquantitynewvl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:columnCount="2">
+
+                        <Button
+                            android:id="@+id/btadddetailsnewinvvl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Add to Invoice"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:id="@+id/btdeleteitemnewvl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/bg_button"
+                            android:textColor="@drawable/button_text_selector"
+                            android:text="Delete Item"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- Invoice Details Header -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/darker_shade">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Return Details"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Table Header Row -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/dark_gray">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Qty"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:text="Description"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="UnitPrice"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="T-Amount"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Table Input Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <EditText
+                            android:id="@+id/etqtynewvl"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="qty"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etdecriptionnewvl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="description"
+                            android:inputType="textMultiLine"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etunitpricenewvl"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="unit-price"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etamountnewvl"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:hint="t-amount"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="11sp"
+                            android:textColor="@color/main_color"
+                            android:gravity="center"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_light"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <!-- Total Quantity Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Total Qty"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tvtotalinvoiceqtyvl"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:gravity="end"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black"
+                            android:layout_marginVertical="6dp" />
+
+                        <!-- Total Amount Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/tvtotalinvoicamountvl"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:gravity="end"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btsendsavevl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Send and Save loading Plan"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- select outlet, category, delivery date, search item, barcode button card view -->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

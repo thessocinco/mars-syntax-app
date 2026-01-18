@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".Inventory.AddItemInventory">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!-- transaction section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvtransadditemInv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Van Selling"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salesman ID"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvsalesmanidadditemInv"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:text="Salesman ID"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/ddddd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Select an inventory item to add quantity"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <!-- select outlet, category, delivery date, search item, barcode button card view -->
+                    <!-- select outlet -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Select Outlet"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/spoutletadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/outlet"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Category"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/spcategoryadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/outlet"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- search item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Item Description"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etqueryproductadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Search Item"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <!-- select product -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Product"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- select product item -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="1">
+
+                        <Spinner
+                            android:id="@+id/spproductadditemInv"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/spinner_light" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Case Factor"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvcsfactoradditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_light"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:hint="0"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText,TextViewEdits" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <!-- unit of measure and cases -->
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        app:columnCount="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unit Of Measure&amp;Cases"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="UM"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvumadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Unit"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="CS-Unit"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvcsumadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Unit"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="InventoryPC"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etquantityadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="CS-Inv"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etcsquantityadditemInv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="0.0"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:maxLength="10"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <Button
+                        android:id="@+id/btsaveadditemInv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Add to My Inventory"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- select outlet, category, delivery date, search item, barcode button card view -->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

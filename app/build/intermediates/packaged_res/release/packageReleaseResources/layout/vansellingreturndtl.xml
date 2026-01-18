@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".VanSelling.VansellingReturnDtl">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+<!--                    <androidx.gridlayout.widget.GridLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        app:columnCount="2"-->
+<!--                        app:rowCount="1">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="SalesmanCode"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="0"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvsalesmanvrd"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="8dp"-->
+<!--                            android:background="@drawable/rounded_textview"-->
+<!--                            android:text="Salesman Code"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="1"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+<!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Salesman Code"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvsalesmanvrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Salesman Code"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+<!--                    <androidx.gridlayout.widget.GridLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        app:columnCount="2"-->
+<!--                        app:rowCount="1">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="ReturnType"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="0"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvreturntypedtl"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="8dp"-->
+<!--                            android:background="@drawable/rounded_textview"-->
+<!--                            android:gravity="start"-->
+<!--                            android:text="Return Details"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:layout_column="1"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            app:layout_row="0"-->
+<!--                            tools:ignore="HardcodedText" />-->
+<!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Return Type"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvreturntypedtl"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Return Details"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+<!--                    <androidx.gridlayout.widget.GridLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        app:columnCount="2"-->
+<!--                        app:rowCount="1">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvinvoicenumber"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="InvoiceNumber"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="0"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvinvoicenumbervrd"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="8dp"-->
+<!--                            android:background="@drawable/rounded_textview"-->
+<!--                            android:text="Invoice Number"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="1"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+<!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invoice Number"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvinvoicenumbervrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Invoice Number"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+<!--                    <androidx.gridlayout.widget.GridLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        app:columnCount="2"-->
+<!--                        app:rowCount="1">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvdetails"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:text="SyntaxDateAndTime"-->
+<!--                            android:textSize="18sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="0"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvsyntaxdatetimevrd"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="8dp"-->
+<!--                            android:background="@drawable/rounded_textview"-->
+<!--                            android:text="SyntaxDate, Time"-->
+<!--                            android:textSize="18sp"-->
+<!--                            app:layout_row="0"-->
+<!--                            app:layout_column="1"-->
+<!--                            app:layout_columnWeight="1"-->
+<!--                            android:gravity="start"-->
+<!--                            tools:ignore="HardcodedText" />-->
+<!--                    </androidx.gridlayout.widget.GridLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Syntax Date&amp;Time"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvsyntaxdatetimevrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="SyntaxDate, Time"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Invoice Details Header -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/darker_shade">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:text="Invoice Details"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Table Header Row -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@color/dark_gray">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="Qty"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="3"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="UM"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="EX-Date"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Table Input Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp">
+
+                            <EditText
+                                android:id="@+id/etqtyviewvrd"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:autofillHints=""
+                                android:hint="qty"
+                                android:background="@drawable/edittext_light"
+                                android:inputType="textMultiLine"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/etdecriptionviewvrd"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:autofillHints=""
+                                android:hint="description"
+                                android:background="@drawable/edittext_light"
+                                android:inputType="textMultiLine"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/etumvrd"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:autofillHints=""
+                                android:hint="um"
+                                android:background="@drawable/edittext_light"
+                                android:inputType="textMultiLine"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/etexpirydatevrd"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:autofillHints=""
+                                android:hint="ex-date"
+                                android:background="@drawable/edittext_light"
+                                android:inputType="textMultiLine"
+                                android:textSize="11sp"
+                                android:textColor="@color/main_color"
+                                android:gravity="center"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_light"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <!-- Total Quantity Row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Total Qty"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/tvtotalqtyvrd"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="0"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btresendsavevrd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Resend Invoice"
+                        android:textSize="14sp"
+                        android:textColor="@drawable/button_text_selector"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

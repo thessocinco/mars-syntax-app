@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <!-- Permissions Start -->
+    <!-- Precise Location (ACCESS_FINE_LOCATION) -->
+    <!--
+          * For GPS (Global Positioning System)
+          * Wi-Fi
+          * Cellular networks
+          * Bluetooth (for Android 8.0 and higher)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+          * For Wi-Fi
+          * Cell tower signals
+          * Other network-based methods (like IP address)
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Telephony Permissions -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <!-- This ensures that the app only installs on devices with GPS and SMS capabilities -->
+    <!-- Telephony Hardware Feature to enable all the Telephony Permission -->
+    <uses-permission android:name="android.permission.USE_SIP" />
+
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <!-- Permissions End -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_marslogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_marslogo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarsApp"
+        tools:targetApi="34">
+
+        <!-- android:theme="@style/Theme.MarsApp" -->
+
+        <!-- for Maps APIs -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="YOUR_GOOGLE_MAPS_API_KEY"/> -->
+
+        <activity
+            android:name=".MarsAppStartUp.Startup"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainProgram.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Receiver with exported attribute -->
+        <receiver
+            android:name=".Receiver.SMSReceiver"
+            android:permission="android.permission.BROADCAST_SMS"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Additional Activities -->
+
+        <!-- TEST -->
+        <!-- <activity android:name=".NotVisitedCustomersActivity" /> -->
+        <!-- TEST -->
+
+        <!--    disabled    -->
+<!--        <activity android:name=".InstallProgress.InstallProgress" />-->
+
+        <activity
+            android:name=".SendReason.SendReason"
+            android:label="@string/title_activity_no_order" />
+
+        <activity
+            android:name=".InvoiceData.NewInvoice"
+            android:label="@string/title_activity_new_invoice" />
+
+        <activity
+            android:name=".CustomerData.AgrichemCustomerDetails"
+            android:label="@string/title_activity_agrichem_customer_details" />
+
+        <activity
+            android:name=".CustomerData.CustomerDetails"
+            android:label="@string/title_activity_customer_details" />
+
+        <activity
+            android:name=".Inventory.SalesInventory"
+            android:label="@string/title_activity_sales_inventory" />
+
+        <activity
+            android:name=".CustomerData.ConsumerCustomerDetails"
+            android:label="@string/title_activity_consumer_customer_details" />
+
+        <activity
+            android:name=".CustomerData.NewOtherCustomer"
+            android:label="@string/title_activity_new_other_customer" />
+
+        <activity
+            android:name=".CustomerData.ConsumerNewOtherCustomer"
+            android:label="@string/title_activity_consumer_new_other_customer" />
+
+        <activity
+            android:name=".CustomerData.AgrichemNewOtherCustomer"
+            android:label="@string/title_activity_agrichem_new_other_customer" />
+
+        <activity
+            android:name=".VanSelling.VansellingLoadingPlan"
+            android:label="@string/title_activity_vanselling_loading_plan" />
+
+        <activity
+            android:name=".CustomerData.OtherCustomer"
+            android:label="@string/title_activity_other_customer" />
+
+        <!-- <activity android:name=".Startup"-->
+        <!-- android:label="@string/title_activity_startup" /> -->
+
+        <activity
+            android:name=".Inventory.PaymentDetails"
+            android:label="@string/title_activity_payment_details" />
+
+        <activity
+            android:name=".Inventory.AddItem"
+            android:label="@string/title_activity_add_item" />
+
+        <activity
+            android:name=".Inventory.AddItemInventory"
+            android:label="@string/title_activity_add_item_inventory" />
+
+        <activity
+            android:name=".BankMap.BankMap"
+            android:label="@string/title_activity_bank_map" />
+
+        <activity
+            android:name=".CustomerData.CustomerData"
+            android:label="@string/title_activity_customer_data" />
+
+        <activity
+            android:name=".InvoiceData.InvoiceDtl"
+            android:label="@string/title_activity_invoice_dtl" />
+
+        <activity
+            android:name=".SendReason.ViewCustomerReason"
+            android:label="@string/title_activity_view_customer_reason" />
+
+        <activity
+            android:name=".Inventory.ViewLoadingPlan"
+            android:label="@string/title_activity_view_loading_plan" />
+
+        <activity
+            android:name=".VanSelling.VansellingReturn"
+            android:label="@string/title_activity_vanselling_return" />
+
+        <activity
+            android:name=".VanSelling.VansellingReturnNew"
+            android:label="@string/title_activity_vanselling_return_new" />
+
+        <activity
+            android:name=".VanSelling.VansellingReturnDtl"
+            android:label="@string/title_activity_vanselling_return_dtl" />
+
+        <activity
+            android:name=".Inventory.Ledger"
+            android:label="@string/title_activity_ledger" />
+
+
+        <!--    UpdateSQLpackages Data; Setup Here    -->
+        <activity
+            android:name=".UpdateSQLpackages.AgriChemData"
+            android:label="@string/title_activity_eqdata" />
+
+        <activity
+            android:name=".UpdateSQLpackages.BeloData"
+            android:label="@string/title_activity_eqdata" />
+
+        <activity
+            android:name=".UpdateSQLpackages.Century1Data"
+            android:label="@string/title_activity_century1_data" />
+
+        <activity
+            android:name=".UpdateSQLpackages.Century2Data"
+            android:label="@string/title_activity_century2_data" />
+
+        <activity
+            android:name=".UpdateSQLpackages.MultiLinesData"
+            android:label="@string/title_activity_eqdata" />
+
+        <activity
+            android:name=".UpdateSQLpackages.LubricantsData"
+            android:label="@string/title_activity_eqdata" />
+
+        <activity
+            android:name=".UpdateSQLpackages.MontoscoData"
+            android:label="@string/title_activity_montoscodata" />
+
+        <activity
+            android:name=".UpdateSQLpackages.UrcData"
+            android:label="@string/title_activity_urc_data" />
+        <!--    UpdateSQLpackages Data    -->
+
+        <activity
+            android:name=".UpdateSQLpackages.RamData"
+            android:label="@string/title_activity_urc_data" />
+        <!--    UpdateSQLpackages Data    -->
+
+    </application>
+</manifest>

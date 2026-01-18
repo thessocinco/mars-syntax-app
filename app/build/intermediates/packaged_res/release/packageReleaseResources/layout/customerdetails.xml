@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:scrollbars="horizontal"
+    android:name=".CustomerData.CustomerDetails">
+
+    <include layout="@layout/maintoolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:stretchColumns="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="Customer ID"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/etCustomerID"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/rounded_textview"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Customer ID"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Customer Name"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etCustomerName"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Customer Name"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Customer Type"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerCustomerType"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/CustomerTypeArray"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Account Type"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerAccountType"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/CustAccountType"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Terms"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerCustomerTerm"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/CustTerm"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Other Customer Type"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etOtherCustType1"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Other Customer Type"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Contact Person"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etContactPerson"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Contact Person"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Owner Name"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etOwnerName"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Owner Name"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="B-day"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_row="0"
+                            app:layout_column="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etBdaycontact"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="b-day"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="Bday"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_row="0"
+                            app:layout_column="2"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etbdayowner"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="b day"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="Tell-Num"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_row="0"
+                            app:layout_column="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/ettellnumcon"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="tell-num"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="TellNum"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_row="0"
+                            app:layout_column="2"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etTellnumOwner"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="tell num"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="4">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="Cell-Num"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_row="0"
+                            app:layout_column="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etCellNumCon"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="cell-num"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:text="CellNum"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="2"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etCellNumOwn"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="2.5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="cell num"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="3"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/darker_shade">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Customer Address"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Street"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etStreet"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Street Address"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Barangay"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerBarangay"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Municipality"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerMunicipality"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            app:layout_columnWeight="1" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Province"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerProvince"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/spinner_light"
+                            android:entries="@array/ProvinceArray"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="SubPocket"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etSubPocket"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Sub Pocket"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/darker_shade">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Shell Merchandising Materials"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <CheckBox
+                            android:id="@+id/cbSignage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Signage"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbSticker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Stickers"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <CheckBox
+                            android:id="@+id/cbPoster"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Poster"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbDisplayRack"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Display Racks"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="2">
+
+                        <CheckBox
+                            android:id="@+id/cbStreamer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Streamer (Tarpaulin)"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbDisplayProduct"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Product Display"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/darker_shade">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Competitor Brand"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="6">
+
+                        <CheckBox
+                            android:id="@+id/cbCaltex"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Caltex"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbMobil"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Mobil"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText,TooManyViews" />
+
+                        <CheckBox
+                            android:id="@+id/cbCastrol"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Castrol"
+                            android:textSize="14sp"
+                            app:layout_column="2"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbPetron"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Petron"
+                            android:textSize="14sp"
+                            app:layout_column="3"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Others"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etOtherCompetetor"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="Other Competitor"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Requirements"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:columnCount="6">
+
+                        <CheckBox
+                            android:id="@+id/cbCAF"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="CAF"
+                            android:textSize="14sp"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbDTI"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="DTI"
+                            android:textSize="14sp"
+                            app:layout_column="1"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+
+                        <CheckBox
+                            android:id="@+id/cbBusinessPermit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="B-Permit"
+                            android:textSize="14sp"
+                            app:layout_column="2"
+                            app:layout_row="0"
+                            app:layout_columnWeight="1"
+                            tools:ignore="HardcodedText" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="@color/darker_shade">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Old Location"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Latitude"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvolat"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:gravity="center_vertical"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:text="North"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Longitude"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/tvolong"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:gravity="center_vertical"
+                            android:inputType="textMultiLine"
+                            android:padding="8dp"
+                            android:text="East"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="Receiver"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_column="0"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText" />
+
+                        <EditText
+                            android:id="@+id/etReceiverNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:autofillHints=""
+                            android:background="@drawable/edittext_light"
+                            android:hint="+639090909090"
+                            android:inputType="textMultiLine"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            app:layout_column="1"
+                            app:layout_columnWeight="1"
+                            app:layout_row="0"
+                            tools:ignore="HardcodedText,TextFields" />
+                    </androidx.gridlayout.widget.GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginVertical="5dp" />
+
+                    <Button
+                        android:id="@+id/btsendupdates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Send Customer Updates"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btsendupdates2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Send Address"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btsendupdates3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Send Contacts"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btsendupdates4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Send Contacts"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/btsavecurrentdtl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_button"
+                        android:paddingVertical="12dp"
+                        android:stateListAnimator="@null"
+                        android:text="Save Current Details"
+                        android:textColor="@drawable/button_text_selector"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
